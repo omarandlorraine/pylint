@@ -671,7 +671,9 @@ class FormatChecker(BaseTokenChecker):
         self._visited_lines[line] = 2
 
     def check_line_ending(self, line: str, i: int) -> None:
-        """Check that the final newline is not missing and that there is no trailing whitespace."""
+        """Check that the final newline is not missing and that there is no
+        trailing whitespace.
+        """
         if not line.endswith("\n"):
             self.add_message("missing-final-newline", line=i)
             return
@@ -717,7 +719,9 @@ class FormatChecker(BaseTokenChecker):
 
     @staticmethod
     def specific_splitlines(lines: str) -> List[str]:
-        """Split lines according to universal newlines except those in a specific sets."""
+        """Split lines according to universal newlines except those in a
+        specific sets.
+        """
         unsplit_ends = {
             "\v",
             "\x0b",

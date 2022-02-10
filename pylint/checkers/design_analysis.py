@@ -232,7 +232,8 @@ def _is_exempt_from_public_methods(node: astroid.ClassDef) -> bool:
 
 
 def _count_boolean_expressions(bool_op):
-    """Counts the number of boolean expressions in BoolOp `bool_op` (recursive).
+    """Counts the number of boolean expressions in BoolOp `bool_op`
+    (recursive).
 
     example: a and (b or c or (d and e)) ==> 5 boolean expressions
     """
@@ -461,7 +462,9 @@ class MisdesignChecker(BaseChecker):
         "too-many-public-methods",
     )
     def visit_classdef(self, node: nodes.ClassDef) -> None:
-        """Check size of inheritance hierarchy and number of instance attributes."""
+        """Check size of inheritance hierarchy and number of instance
+        attributes.
+        """
         parents = _get_parents(
             node, STDLIB_CLASSES_IGNORE_ANCESTOR.union(self.config.ignored_parents)
         )
@@ -535,8 +538,8 @@ class MisdesignChecker(BaseChecker):
         "keyword-arg-before-vararg",
     )
     def visit_functiondef(self, node: nodes.FunctionDef) -> None:
-        """Check function name, docstring, arguments, redefinition,
-        variable names, max locals
+        """Check function name, docstring, arguments, redefinition, variable
+        names, max locals.
         """
         # init branch and returns counters
         self._returns.append(0)
@@ -614,7 +617,7 @@ class MisdesignChecker(BaseChecker):
 
     def visit_default(self, node: nodes.NodeNG) -> None:
         """Default visit method -> increments the statements counter if
-        necessary
+        necessary.
         """
         if node.is_statement:
             self._inc_all_stmts(1)
@@ -646,8 +649,8 @@ class MisdesignChecker(BaseChecker):
         self._inc_all_stmts(branches)
 
     def _check_boolean_expressions(self, node):
-        """Go through "if" node `node` and count its boolean expressions
-        if the 'if' node test is a BoolOp node
+        """Go through "if" node `node` and count its boolean expressions if the
+        'if' node test is a BoolOp node.
         """
         condition = node.test
         if not isinstance(condition, astroid.BoolOp):
