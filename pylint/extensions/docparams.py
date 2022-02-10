@@ -387,8 +387,8 @@ class DocstringParameterChecker(BaseChecker):
         expected_argument_names,
         warning_node,
     ):
-        """Compare the found argument names with the expected ones and
-        generate a message if there are arguments missing.
+        """Compare the found argument names with the expected ones and generate a
+        message if there are arguments missing.
 
         :param found_argument_names: argument names found in the docstring
         :type found_argument_names: set
@@ -423,8 +423,8 @@ class DocstringParameterChecker(BaseChecker):
         expected_argument_names,
         warning_node,
     ):
-        """Compare the found argument names with the expected ones and
-        generate a message if there are extra arguments found.
+        """Compare the found argument names with the expected ones and generate a
+        message if there are extra arguments found.
 
         :param found_argument_names: argument names found in the docstring
         :type found_argument_names: set
@@ -461,8 +461,8 @@ class DocstringParameterChecker(BaseChecker):
         ignored_argument_names,
         warning_node,
     ):
-        """Compare the found argument names with the ignored ones and
-        generate a message if there are ignored arguments found.
+        """Compare the found argument names with the ignored ones and generate a message
+        if there are ignored arguments found.
 
         :param found_argument_names: argument names found in the docstring
         :type found_argument_names: set

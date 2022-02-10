@@ -51,7 +51,8 @@ def _get_new_args(message):
 def _worker_initialize(
     linter: bytes, arguments: Union[None, str, Sequence[str]] = None
 ) -> None:
-    """Function called to initialize a worker for a Process within a multiprocessing Pool.
+    """Function called to initialize a worker for a Process within a multiprocessing
+    Pool.
 
     :param linter: A linter-class (PyLinter) instance pickled with dill
     :param arguments: File or module name(s) to lint and to be added to sys.path

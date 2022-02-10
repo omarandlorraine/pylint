@@ -279,8 +279,8 @@ class CodeStyleChecker(BaseChecker):
     ) -> bool:
         """Return True if suggestion for assignment expr should be ignored.
 
-        E.g., in cases where a match statement would be a better fit
-        (multiple conditions).
+        E.g., in cases where a match statement would be a better fit (multiple
+        conditions).
         """
         if isinstance(node.test, nodes.Compare):
             next_if_node: Optional[nodes.If] = None
