@@ -259,7 +259,7 @@ class SpellingChecker(BaseTokenChecker):
                 "type": "string",
                 "metavar": "<comma separated words>",
                 "help": "List of comma separated words that should be considered directives if "
-                "they appear and the beginning of a comment and should not be checked.",
+                "they appear at the beginning of a comment and should not be checked.",
             },
         ),
     )
